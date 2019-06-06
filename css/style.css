@@ -1,4 +1,4 @@
-main {
+/* main {
     margin: auto;
     display: grid;
     grid-template-columns: .25fr .25fr .25fr .25fr;
@@ -39,11 +39,15 @@ main {
     grid-template-rows: 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr ;
      
     grid-template-areas: "topbig"
-                         "topbig"
+                         "topbigtext"
                          "topfour"
+                         "topfourtext"
                          "topfour"
+                         "topfourtext"
                          "topfour"
+                         "topfourtext"
                          "topfour"
+                         "topfourtext"
                          "midbig"
                          "midbig"
                          "bottomfour" 
@@ -58,6 +62,10 @@ main {
 #topbig {
     grid-area: topbig;
     background-color: lightskyblue;
+}
+
+#topbigtext {
+    grid-area: topbigtext;
 }
 
 #topfour {
@@ -86,4 +94,102 @@ main {
 #bottombig {
     grid-area: bottombig;
     background-color: lightpink;
+} */
+
+/* Teacher's Answer: */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 50px 1fr repeat(4, 200px) 1fr repeat(4, 200px) 1fr 400px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "nav"
+    "feature1"
+    "smalls11"
+    "smalls12"
+    "smalls13"
+    "smalls14"
+    "feature2"
+    "smalls21"
+    "smalls22"
+    "smalls23"
+    "smalls24"
+    "feature3"
+    "footer";
+}
+
+nav {
+    grid-area: nav;
+    background-color: gray;
+}
+
+#feature1 {
+    grid-area: feature1;
+}
+img {
+    max-width: 100%;
+}
+
+div {
+    background-color: red;
+}
+
+#small11 {
+    grid-area: smalls11;
+}
+#small12 {
+    grid-area: smalls12;
+}
+#small13 {
+    grid-area: smalls13;
+}
+#small14 {
+    grid-area: smalls14;
+}
+
+
+#feature2 {
+    grid-area: feature2;
+}
+#small21 {
+    grid-area: smalls21;
+}
+#small22 {
+    grid-area: smalls22;
+}
+#small23 {
+    grid-area: smalls23;
+}
+#small24 {
+    grid-area: smalls24;
+}
+
+#feature3 {
+    grid-area: feature3;
+}
+
+footer {
+    grid-area: footer;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        grid-template-rows: 50px 1fr repeat(2, 100px) 1fr repeat(2, 100px) 1fr 400px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "nav      nav"
+            "feature1 feature1"
+            "smalls11 smalls12"
+            "smalls13 smalls14"
+            "feature2 feature2"
+            "smalls21 smalls22"
+            "smalls23 smalls24"
+            "feature3 feature3"
+            "footer   footer";
+    }
 }
