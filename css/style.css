@@ -1,0 +1,89 @@
+main {
+    margin: auto;
+    display: grid;
+    grid-template-columns: .25fr .25fr .25fr .25fr;
+    grid-template-rows: .2fr .1fr 1fr .2fr .1fr .1fr .2fr;
+    grid-gap: 1em;
+    grid-template-areas: "topbig topbig topbig topbig"
+                         "topfour topfour topfour topfour"
+                         "topfourtext topfourtext topfourtext topfourtext"
+                         "midbig midbig midbig midbig"
+                         "bottomfour bottomfour bottomfour bottomfour"
+                         "bottomfourtext bottomfourtext bottomfourtext bottomfourtext"
+                         "bottombig bottombig bottombig bottombig";
+}
+
+@media screen and (min-width: 700x) {
+    body {
+    grid-template-columns: .5fr .5fr;
+    grid-template-rows: .60fr .40 .15fr .40 .15fr .60fr .40 .15fr .40 .15fr .60fr;
+     
+    grid-template-areas: "topbig topbig"
+                         "topfour topfour"
+                         "topfourtext topfourtext"
+                         "topfour topfour"
+                         "topfourtext topfourtext"
+                         "midbig midbig"
+                         "bottomfour bottomfour"
+                         "bottomfourtext bottomfourtext"
+                         "bottomfour bottomfour"
+                         "bottomfourtext bottomfourtext"
+                         "bottombig bottombig";
+    }
+  }
+
+@media screen and (min-width: 400x) {
+    body {
+    min-width: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr 7.15fr ;
+     
+    grid-template-areas: "topbig"
+                         "topbig"
+                         "topfour"
+                         "topfour"
+                         "topfour"
+                         "topfour"
+                         "midbig"
+                         "midbig"
+                         "bottomfour" 
+                         "bottomfour"
+                         "bottomfour"
+                         "bottomfour"
+                         "bottombig"
+                         "bottombig";
+    }
+  }
+
+#topbig {
+    grid-area: topbig;
+    background-color: lightskyblue;
+}
+
+#topfour {
+    grid-area: topfour;
+    background-color: ivory
+}
+
+#topfourtext {
+    grid-area: topfourtext;
+}
+
+#midbig {
+    grid-area: midbig;
+    background-color: lightcoral;
+}
+
+#bottomfour {
+    grid-area: bottomfour;
+    background-color: lightslategrey;
+}
+
+#bottomfourtext {
+    grid-area: bottomfourtext;
+}
+
+#bottombig {
+    grid-area: bottombig;
+    background-color: lightpink;
+}
